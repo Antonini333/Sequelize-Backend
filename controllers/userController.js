@@ -33,7 +33,7 @@ async login (req, res) {
         console.log(token)
         user.token = token;
         await user.save()
-        res.send(user);
+        res.send({message: `Welcome back ${user.name}`,user});
     }catch (error) {
         console.error(error);
         res.status(500).send({

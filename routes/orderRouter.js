@@ -1,5 +1,10 @@
 const router = require('express').Router();
-const orderController = require('../controllers/orderController');
+const OrderController = require('../controllers/orderController');
+
+router.get('/', OrderController.getAll);
+
+//router.post('/', OrderController.create);
+
 
 
 

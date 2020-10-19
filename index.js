@@ -20,7 +20,7 @@ app.use('/movies', movieRouter);
 app.use('/users', userRouter);
 
 //Endpoint de pedidos
-app.use('/orders', auth, orderRouter);
+app.use('/orders', orderRouter);
 
 
 app.listen(PORT, () => console.log(`Server UP on port ${PORT}`));

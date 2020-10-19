@@ -1,7 +1,4 @@
-const {
-    Movie,
-    Sequelize
-  } = require('../models');
+const { Movie, Sequelize } = require('../models');
 
   const Op = Sequelize.Op;
   
@@ -17,6 +14,7 @@ const {
           })
         })
     },
+
     getById(req,res){
       Movie.findByPk(req.params.id)
         .then(movie => res.send(movie))
@@ -27,6 +25,7 @@ const {
           })
       })
     },
+
     getByTitle(req,res){
       Movie.findAll({
         where:{
@@ -43,6 +42,7 @@ const {
           })
       })
     },
+
     create(req,res){
       Movie.create(req.body)
         .then(movie => res.send(movie))

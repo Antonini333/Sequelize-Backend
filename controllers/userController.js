@@ -40,9 +40,55 @@ async login (req, res) {
             message: "Wrong credentials"
         })
     }
-}
+},
 
+async profile (req, res) {
+    try {
+      const user = await User.findAll({
+        where: {
+          email: req.body.email, 
+          password: req.body.password
+        },
+      attributes: {
+        exclude: ['token', 'id']
+      }})
+        res.status(201).send(user)
+    }catch (error) {
+      console.error (error)
+      res.status (500).send ({error, message: 'There was a problem trying to get information.'})
+    }
+  },
 
+  /*async logout (req, res) {
+      try {
+          const user = await User.findAll
+      }
+  },*/
+
+  delete(req,res) {
+
+    User.destroy({
+      where: {
+        email: req.params.email
+      }
+    })
+    .then((email) => {
+      if (!email) {
+        return res.send({
+          message: 'Email not found.'
+        })
+      }
+      res.send({
+        message: 'Account deleted.'
+      })
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).send({
+        message: 'There was a problem trying to delete the account.'
+      })
+    })
+  }
 
 
 }

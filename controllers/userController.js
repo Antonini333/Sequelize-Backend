@@ -46,9 +46,9 @@ async profile (req, res) {
     try {
       const user = await User.findAll({
         where: {
-          email: req.body.email, 
-          password: req.body.password
+          email: req.params.email
         },
+        
       attributes: {
         exclude: ['token', 'id']
       }})

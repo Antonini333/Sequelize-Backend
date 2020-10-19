@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Order.init({
-    status: DataTypes.ENUM,
+    status: DataTypes.STRING,
     returnDate: DataTypes.DATE,
     UserId: DataTypes.INTEGER
   }, {

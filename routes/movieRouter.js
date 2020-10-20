@@ -2,12 +2,12 @@ const router = require('express').Router();
 const MovieController = require('../controllers/movieController');
 
 
-router.get('/', MovieController.getAll);
-router.get('/:id', MovieController.getById);
-router.get('/title/:title', MovieController.getByTitle);
+router.get('/', MovieController.getAll); // CHECK
+router.get('/:id', MovieController.getById); //CHECK
+router.get('/title/:title', MovieController.getByTitle); //CHECK
 
-router.post('/', MovieController.create);
-//router.delete('/:id', MovieController.delete);
+router.post('/', MovieController.create); //CHECK
+router.delete('/:id', MovieController.deleteMovie); //CHECK
 
 
 

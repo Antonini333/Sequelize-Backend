@@ -4,6 +4,17 @@ const jwt = require ('jsonwebtoken');
 
 const UserController = {
 
+  showAll(req,res){
+    User.findAll()
+      .then(users => res.send(users))
+      .catch(error => {
+        console.error(error);
+        res.status(500).send({
+          message: 'Something went wrong calling all users.'
+        })
+      })
+  },
+
 async signup(req, res){
     try{
         req.body.password = await bcrypt.hash(req.body.password, 9)
@@ -59,11 +70,7 @@ async profile (req, res) {
     }
   },
 
-  /*async logout (req, res) {
-      try {
-          const user = await User.findAll
-      }
-  },*/
+
 
   delete(req,res) {
 

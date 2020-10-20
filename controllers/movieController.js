@@ -52,6 +52,30 @@ const { Movie, Sequelize } = require('../models');
             message: 'Something went wrong creating a new movie'
           })
         })
+    },
+    deleteMovie(req,res) {
+
+      Movie.destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then((id) => {
+        if (!id) {
+          return res.send({
+            message: "Can't erase movie"
+                    })
+        }
+        res.send({
+          message: 'Movie deleted.'
+        })
+      })
+      .catch(error => {
+        console.error(error);
+        res.status(500).send({
+          message: 'Something went wrong erasing movie.'
+        })
+      })
     }
   }
   

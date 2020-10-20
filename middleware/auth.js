@@ -4,7 +4,7 @@ const User = require ('../models/user');
 const auth = async (req, res, next) => {
     try{
         const token = req.headers.authorization;
-        jwt.verify(token, "agallaselperrocobarde");
+        jwt.verify(token, "agallaselperrocobarde",  {expiresIn: "30d"});
         const user = await User.findOne({ where: {token: token} });
         if(!user) {
             return res.status(401).send ({ message: "Go register or login and come back with your token"})

@@ -52,16 +52,16 @@ It consts of three featured main endpoints:
  
  ## SIGN UP
  
- ![Screenshot]() 
+ ![Screenshot](screenshots/signup.png) 
  
  ## LOG IN
  
-  ![Screenshot]() 
+  ![Screenshot](screenshots/login.png) 
   
-  ## DELETE USER
+  ## SEARCH BY TITLE
   
- ![Screenshot]() 
+ ![Screenshot](screenshots/search.png) 
  
  ## MOVIE RENTED
  
-![Screenshot]()  
+![Screenshot](screenshots/order.png)  

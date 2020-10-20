@@ -1,9 +1,9 @@
-# SequelizeBackend
+# 📑 SequelizeBackend 📑
 
 
 ## Backend App designed to manipulate a movies webpage. <br>
 
-###  Created with:
+### 🔧 Created with: 🔧
 * NodeJs 
 * Express
 * mySQL
@@ -12,22 +12,22 @@
 * JsonWebToken
 * Bcrypt
 
-#### Tested with Postman.
+#### 🆗 Tested with Postman.
 
-#### Deployed in Heroku at: https://sequelize-backend-antonini333.herokuapp.com
+#### 🆙 Deployed in Heroku at: https://sequelize-backend-antonini333.herokuapp.com
+<br><br>
 
-
-## Content:
-
+## 💻 Content:
+<br>
 ### The app contains three featured main endpoints: 
-+ #### Movies
-+ #### Users
-+ #### Orders.
-<br>
+
++ #### Movies 🎥
++ #### Users  👫
++ #### Orders. 📥
 <br>
 <br>
 
-### MOVIES:
+### 🎥 MOVIES:
 <br>
    * You can go check this URL to see all the catalog at http://sequelize-backend-antonini333.herokuapp.com//movies
    <br><br>
@@ -41,7 +41,7 @@
          <br>
    
 
-### USERS:
+### 👫 USERS:
 <br>
          This endpoints need some information by body, and since we haven't a frontend yet, it needs to be posted by some tool like Postman.
          <br><br>
@@ -55,7 +55,7 @@
          
 
 
-### ORDERS:
+### 📥 ORDERS:
 <br>
      We still have any frontend, so this endpoints also will need some interactions with Postman.
       <br>  <br>

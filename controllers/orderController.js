@@ -28,6 +28,29 @@ const OrderController = {
                 message: 'Something went wrong calling orders'
             })
         }
+    },
+
+    async create (req, res) {
+        try {
+            const returnDate = new Date();
+            returnDate.setDate(returnDate.getDate() + 4)
+            const order = await Order.create({
+                status: 'Rented',
+                returnDate,
+                UserId: req.user.id,
+                
+            });  
+            order.addMovie(req.body.movies)              
+                res.send({
+                    message: 'Order successfully completed', order
+                })
+            
+        } catch (error) {
+            console.error(error);
+            res.status(500).send({
+                message: 'Something went wrong with your order'
+            })
+        }
     }
 }
 

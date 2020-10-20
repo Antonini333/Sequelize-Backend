@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const UserController = require ('../controllers/userController');
 
-router.post('/signup', UserController.signup); //CHECK
-router.post('/login', UserController.login); //CHECK genera nuevo token cada vez
+router.post('/signup', UserController.signup); //CHECKED
+router.post('/login', UserController.login); //CHECKED (new token everytime)
 
-router.get('/profile/:email', UserController.profile); //enseña el password
-router.get('/', UserController.showAll);
+router.get('/profile/:email', UserController.profile); // CHECKED (show password(!!))
+router.get('/', UserController.showAll); // CHECKED (should be admin rol)
 
-router.delete('/delete/:email', UserController.delete);
+router.delete('/delete/:email', UserController.delete); //CHECKED
 
 
 

@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const OrderController = require('../controllers/orderController');
+const auth = require('../middleware/auth');
 
-router.get('/', OrderController.getAll);
+router.get('/', OrderController.getAll); //CHECKED 
 
-//router.post('/', OrderController.create);
+router.post('/', auth, OrderController.create); //CHECKED
 
 
 

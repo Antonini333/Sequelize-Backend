@@ -19,6 +19,7 @@
 
 ## 💻 Content:
 <br>
+
 ### The app contains three featured main endpoints: 
 
 + #### Movies 🎥
@@ -53,7 +54,7 @@
          <br>
          * If you ever get bored, you can delete your account at http://sequelize-backend-antonini333.herokuapp.com//users/deleteuser by Postman, just giving your email and password. 
          
-
+<br>
 
 ### 📥 ORDERS:
 <br>

@@ -44,7 +44,7 @@
 
 ### 👫 USERS:
 <br>
-         This endpoints need some information by body, and since we haven't a frontend yet, it needs to be posted by some tool like Postman.
+         This endpoints may need some information by body, and since we haven't a frontend yet, it needs to be posted by some tool like Postman.
          <br><br>
          * You can go to http://sequelize-backend-antonini333.herokuapp.com//users/signup and, by posting a email and a new password, you'll be registered and your password will be encrypted and safely stored at our database.
          <br> 

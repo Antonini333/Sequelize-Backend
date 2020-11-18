@@ -1,7 +1,7 @@
 # 📑 SequelizeBackend 📑
 
 
-## Backend App designed to manipulate a movies webpage. <br>
+## Backend App designed to manage a movie-rent webpage. <br>
 
 ### 🔧 Created with: 🔧
 * NodeJs 
